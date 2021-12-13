@@ -1,0 +1,7 @@
+.nav {
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+
+  column-gap: 10px;
+}

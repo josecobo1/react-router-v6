@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.element {
+  border: 1px solid beige;
+  padding: 5px;
+}
+
+.element:hover {
+  background-color: beige;
+}
