@@ -1,7 +1,18 @@
 .nav {
-  width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+
+  background-color: #03071e;
+}
+
+.nav__container {
+  width: 100%;
+
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 
   column-gap: 10px;
+
+  color: white;
 }

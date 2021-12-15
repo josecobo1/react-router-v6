@@ -2,6 +2,28 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-items: start;
+  justify-items: center;
   gap: 5px;
+}
+
+.container__field {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+
+.container__save {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  color: white;
+  background-color: #9d0208;
+  justify-self: stretch;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.container__save:hover {
+  background-color: transparent;
+  color: #9d0208;
 }

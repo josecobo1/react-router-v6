@@ -1,0 +1,13 @@
+.container__save {
+    width: 300px;
+    color: white;
+    background-color: #9d0208;
+    justify-self: stretch;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  
+  .container__save:hover {
+    background-color: transparent;
+    color: #9d0208;
+  }

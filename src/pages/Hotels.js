@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./Hotels.module.css";
 
 const Hotels = ({ hotels }) => {
@@ -5,11 +6,13 @@ const Hotels = ({ hotels }) => {
     <div className={classes.container}>
       {hotels.map((hotel, key) => {
         return (
-          <div key={key} className={classes.element}>
-            <h1>Hotel: {hotel.name}</h1>
-            <h2>Rooms: {hotel.rooms}</h2>
-            <h3>Rating: {hotel.rating}</h3>
-          </div>
+          <Link to={`/hotels/${key}`} style={{textDecoration: 'none', color: 'black'}}>
+            <div key={key} className={classes.element}>
+              <h1>{hotel.name}</h1>
+              <h2>Rooms: {hotel.rooms}</h2>
+              <h3>Rating: {hotel.rating}/10</h3>
+            </div>
+          </Link>
         );
       })}
     </div>

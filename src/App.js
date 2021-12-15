@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Route, Routes } from "react-router";
 import classes from "./app.module.css";
 import Nav from "./components/Nav";
+import Details from "./pages/Details";
 import Form from "./pages/Form";
 import Hotels from "./pages/Hotels";
 
@@ -10,17 +11,17 @@ const App = () => {
     {
       name: "Hotel Barcelona",
       rooms: 5,
-      rating: "8/10",
+      rating: 8,
     },
     {
       name: "Hotel Paris",
       rooms: 41,
-      rating: "9/10",
+      rating: 9,
     },
     {
       name: "Hotel Munich",
       rooms: 14,
-      rating: 10 / 10,
+      rating: 10,
     },
   ];
 
@@ -34,8 +35,14 @@ const App = () => {
     <>
       <Nav />
       <div className={classes.container}>
-        <Routes>
+        {/* <Routes>
           <Route path="/hotels" element={<Hotels hotels={hotels} />} />
+        </Routes> */}
+        <Routes>
+          <Route path="/hotels">
+            <Route path="" element={<Hotels hotels={hotels} />} />
+            <Route path=":hotelId" element={<Details hotels={hotels} />} />
+          </Route>
         </Routes>
         <Routes>
           <Route path="/new" element={<Form onSubmit={newHotelHandler} />} />
