@@ -35,9 +35,6 @@ const App = () => {
     <>
       <Nav />
       <div className={classes.container}>
-        {/* <Routes>
-          <Route path="/hotels" element={<Hotels hotels={hotels} />} />
-        </Routes> */}
         <Routes>
           <Route path="/hotels">
             <Route path="" element={<Hotels hotels={hotels} />} />
